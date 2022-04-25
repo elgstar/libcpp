@@ -1,8 +1,8 @@
 /*
  * exception classes
 */
-#ifndef _SLJ_EXCEPTION_H_
-#define _SLJ_EXCEPTION_H_
+#ifndef _SLJ_EXCEPTION_HPP_
+#define _SLJ_EXCEPTION_HPP_
 #include <exception>
 #include <string>
 #include <iostream>
