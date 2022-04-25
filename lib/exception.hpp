@@ -106,11 +106,12 @@ namespace slj {
  * @brief: macro function to get the exception information
  * @info: written by Liangjin Song on 20220425 at Nanchang University
  * @param: msg -- exceptional supplementary information
+ * @return: void
 */
-#define EXCEPTION(msg)              (slj::Exception{__FILE__ , __FUNCTION__ , __LINE__ , msg})
-#define ERRORLOGIC(msg)             (slj::ErrorLogic{__FILE__ , __FUNCTION__ , __LINE__ , msg})
-#define ERROROUTFLOW(msg)           (slj::ErrorOutflow{__FILE__ , __FUNCTION__ , __LINE__ , msg})
-#define ERROREXPECTION(msg)         (slj::ErrorExpection{__FILE__ , __FUNCTION__ , __LINE__ , msg})
+#define EXCEPTION(msg)              (slj::Exception{__FILE__ , __FUNCTION__ , __LINE__ , (msg)})
+#define ERRORLOGIC(msg)             (slj::ErrorLogic{__FILE__ , __FUNCTION__ , __LINE__ , (msg)})
+#define ERROROUTFLOW(msg)           (slj::ErrorOutflow{__FILE__ , __FUNCTION__ , __LINE__ , (msg)})
+#define ERROREXPECTION(msg)         (slj::ErrorExpection{__FILE__ , __FUNCTION__ , __LINE__ , (msg)})
 }
 
 
