@@ -2,6 +2,7 @@
 
 在指定位置抛出异常，继承自`std::exception`，位于`exception.hpp`文件中。
 
+
 ## 一、`Exception`类
 
 本程序库中所有异常的基类，继承自`std::exception`。
