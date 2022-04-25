@@ -119,4 +119,6 @@ while(true) {
 
 ### 四、组件说明
 
-+ [异常类](doc/exception.md)
+`doc`目录存放每一个工具的说明，`example`目录存放每一个工具的使用示例，`lib`目录存放以下工具：
+
++ [异常](doc/exception.md)
