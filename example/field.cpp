@@ -1,10 +1,10 @@
 /*
  * test the field
 */
-// #define DIVIDE_BY_ZERO_EXCEPTION
-#define DIVIDE_BY_ZERO_TO_ZERO
+#define SLJ_DIVIDE_BY_ZERO_EXCEPTION
+// #define SLJ_DIVIDE_BY_ZERO_TO_ZERO
 
-#include "../lib/field.hpp"
+#include "../kits/field.hpp"
 
 
 template <typename R>

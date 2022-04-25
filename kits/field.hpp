@@ -15,9 +15,9 @@ namespace slj {
 */
 class ITripolar {
 public:
-    size_t i, j, k;
+    n_nat i, j, k;
 public:
-    ITripolar(const size_t &ii = 0, const size_t &jj = 0, const size_t &kk = 0): i(ii), j(jj), k(kk) {}
+    ITripolar(const n_nat &ii = 0, const n_nat &jj = 0, const n_nat &kk = 0): i(ii), j(jj), k(kk) {}
     ~ITripolar() = default;
 };
 
@@ -68,7 +68,7 @@ public:
         return {x*rhs.x, y*rhs.y, z*rhs.z};
     }
     Tripolar operator/(const Tripolar &rhs) {
-        #if  defined(DIVIDE_BY_ZERO_EXCEPTION)
+        #if  defined(SLJ_DIVIDE_BY_ZERO_EXCEPTION)
         {
             if(isEqual<R>(rhs.x, 0) || isEqual<R>(rhs.y, 0) || isEqual<R>(rhs.z, 0)) {
                 throw ERROROUTFLOW("divided by zero");
@@ -77,7 +77,7 @@ public:
                 return {x/rhs.x, y/rhs.y, z/rhs.z};
             }
         }
-        #elif   defined(DIVIDE_BY_ZERO_TO_ZERO)
+        #elif   defined(SLJ_DIVIDE_BY_ZERO_TO_ZERO)
         {
             R xx, yy, zz;
             isEqual<R>(rhs.x, 0)?(xx = 0):(xx = x/rhs.x);
@@ -123,7 +123,7 @@ public:
         return {x*rhs, y*rhs, z*rhs};
     }
     Tripolar operator/(const R &rhs) {
-        #if  defined(DIVIDE_BY_ZERO_EXCEPTION)
+        #if  defined(SLJ_DIVIDE_BY_ZERO_EXCEPTION)
         {
             if(isEqual<R>(rhs, 0)) {
                 throw ERROROUTFLOW("divided by zero");
@@ -132,7 +132,7 @@ public:
                 return {x/rhs, y/rhs, z/rhs};
             }
         }
-        #elif   defined(DIVIDE_BY_ZERO_TO_ZERO)
+        #elif   defined(SLJ_DIVIDE_BY_ZERO_TO_ZERO)
         {
             R xx, yy, zz;
             isEqual<R>(rhs, 0)?(xx = yy = zz = 0):(xx = x/rhs, yy = y/rhs, zz = z/rhs);
