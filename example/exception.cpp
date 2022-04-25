@@ -3,8 +3,6 @@
 */
 #include "../kits/exception.hpp"
 
-#include <exception>
-
 int main()
 {
     std::string msg{"test!"};
