@@ -1,0 +1,4 @@
+/*
+ * An exception class
+*/
+
