@@ -1,0 +1,120 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/liangjin/libcpp/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20220424.0/
+1、成员变量	doc/exception.md	/^### 1、成员变量$/;"	S	section:异常""一、`Exception`类
+1、成员变量	doc/exception.md	/^### 1、成员变量$/;"	S	section:异常""三、`ErrorOutflow`
+1、成员变量	doc/exception.md	/^### 1、成员变量$/;"	S	section:异常""二、`ErrorLogic`
+1、成员变量	doc/exception.md	/^### 1、成员变量$/;"	S	section:异常""四、`ErrorExpection`
+2、成员函数	doc/exception.md	/^### 2、成员函数$/;"	S	section:异常""一、`Exception`类
+2、构造与析构	doc/exception.md	/^### 2、构造与析构$/;"	S	section:异常""一、`Exception`类
+2、构造与析构	doc/exception.md	/^### 2、构造与析构$/;"	S	section:异常""三、`ErrorOutflow`
+2、构造与析构	doc/exception.md	/^### 2、构造与析构$/;"	S	section:异常""二、`ErrorLogic`
+2、构造与析构	doc/exception.md	/^### 2、构造与析构$/;"	S	section:异常""四、`ErrorExpection`
+3、保护成员函数	doc/exception.md	/^### 3、保护成员函数$/;"	S	section:异常""一、`Exception`类
+3、保护成员函数	doc/exception.md	/^### 3、保护成员函数$/;"	S	section:异常""三、`ErrorOutflow`
+3、保护成员函数	doc/exception.md	/^### 3、保护成员函数$/;"	S	section:异常""二、`ErrorLogic`
+3、保护成员函数	doc/exception.md	/^### 3、保护成员函数$/;"	S	section:异常""四、`ErrorExpection`
+ERROREXPECTION	kits/exception.hpp	/^#define ERROREXPECTION(/;"	d
+ERRORLOGIC	kits/exception.hpp	/^#define ERRORLOGIC(/;"	d
+ERROROUTFLOW	kits/exception.hpp	/^#define ERROROUTFLOW(/;"	d
+EXCEPTION	kits/exception.hpp	/^#define EXCEPTION(/;"	d
+ErrorExpection	kits/exception.hpp	/^    ErrorExpection(const std::string &file, const std::string &func, const int &line, const std:/;"	f	class:slj::ErrorExpection
+ErrorExpection	kits/exception.hpp	/^class ErrorExpection : public Exception {$/;"	c	namespace:slj
+ErrorLogic	kits/exception.hpp	/^    ErrorLogic(const std::string &file, const std::string &func, const int &line, const std::str/;"	f	class:slj::ErrorLogic
+ErrorLogic	kits/exception.hpp	/^class ErrorLogic : public Exception {$/;"	c	namespace:slj
+ErrorOutflow	kits/exception.hpp	/^    ErrorOutflow(const std::string &file, const std::string &func, const int &line, const std::s/;"	f	class:slj::ErrorOutflow
+ErrorOutflow	kits/exception.hpp	/^class ErrorOutflow : public Exception {$/;"	c	namespace:slj
+Exception	kits/exception.hpp	/^    Exception(const std::string &file, const std::string &func, const int &line, const std::stri/;"	f	class:slj::Exception
+Exception	kits/exception.hpp	/^class Exception : public std::exception {$/;"	c	namespace:slj
+ITripolar	kits/field.hpp	/^    ITripolar(const n_nat &ii = 0, const n_nat &jj = 0, const n_nat &kk = 0): i(ii), j(jj), k(kk/;"	f	class:slj::ITripolar
+ITripolar	kits/field.hpp	/^class ITripolar {$/;"	c	namespace:slj
+SLJ_DIVIDE_BY_ZERO_EXCEPTION	example/field.cpp	/^#define SLJ_DIVIDE_BY_ZERO_EXCEPTION$/;"	d	file:
+Sexpolar	kits/field.hpp	/^    Sexpolar(const R &aa = 0, const R &ab = 0, const R &ac = 0, const R &bb = 0, const R &bc = 0/;"	f	class:slj::Sexpolar
+Sexpolar	kits/field.hpp	/^class Sexpolar {$/;"	c	namespace:slj
+Tripolar	kits/field.hpp	/^    Tripolar(const R &xx = 0, const R &yy=0, const R &zz = 0): x(xx), y(yy), z(zz) {}$/;"	f	class:slj::Tripolar
+Tripolar	kits/field.hpp	/^class Tripolar {$/;"	c	namespace:slj
+_SLJ_EXCEPTION_HPP_	kits/exception.hpp	/^#define _SLJ_EXCEPTION_HPP_$/;"	d
+_SLJ_FIELD_HPP_	kits/field.hpp	/^#define _SLJ_FIELD_HPP_$/;"	d
+_SLJ_UTILITY_HPP_	kits/utility.hpp	/^#define _SLJ_UTILITY_HPP_$/;"	d
+cross	kits/field.hpp	/^    Tripolar cross(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+dot	kits/field.hpp	/^    R dot(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:R
+filename	kits/exception.hpp	/^    std::string filename;$/;"	m	class:slj::Exception	typeref:typename:std::string
+function	kits/exception.hpp	/^    std::string function;$/;"	m	class:slj::Exception	typeref:typename:std::string
+head	kits/exception.hpp	/^    virtual void head() {$/;"	f	class:slj::Exception	typeref:typename:void
+i	kits/field.hpp	/^    n_nat i, j, k;$/;"	m	class:slj::ITripolar	typeref:typename:n_nat
+isEqual	kits/utility.hpp	/^bool isEqual(const R &a, const R &b)$/;"	f	namespace:slj	typeref:typename:bool
+j	kits/field.hpp	/^    n_nat i, j, k;$/;"	m	class:slj::ITripolar	typeref:typename:n_nat
+k	kits/field.hpp	/^    n_nat i, j, k;$/;"	m	class:slj::ITripolar	typeref:typename:n_nat
+libcpp	readme.md	/^# libcpp$/;"	c
+linenumber	kits/exception.hpp	/^    int linenumber;$/;"	m	class:slj::Exception	typeref:typename:int
+main	example/exception.cpp	/^int main()$/;"	f	typeref:typename:int
+main	example/field.cpp	/^int main()$/;"	f	typeref:typename:int
+main	example/utility.cpp	/^int main()$/;"	f	typeref:typename:int
+msg	kits/exception.hpp	/^    std::string msg;$/;"	m	class:slj::Exception	typeref:typename:std::string
+n_nat	kits/utility.hpp	/^typedef size_t n_nat;$/;"	t	namespace:slj	typeref:typename:size_t
+n_real	kits/utility.hpp	/^    typedef double n_real;$/;"	t	namespace:slj	typeref:typename:double
+n_real	kits/utility.hpp	/^    typedef float n_real;$/;"	t	namespace:slj	typeref:typename:float
+n_real	kits/utility.hpp	/^    typedef long double n_real;$/;"	t	namespace:slj	typeref:typename:long double
+operator *	kits/field.hpp	/^    Sexpolar operator*(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar
+operator *	kits/field.hpp	/^    Tripolar operator*(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator *	kits/field.hpp	/^    Tripolar operator*(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator *=	kits/field.hpp	/^    Sexpolar &operator*=(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar &
+operator *=	kits/field.hpp	/^    Tripolar &operator*=(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator *=	kits/field.hpp	/^    Tripolar &operator*=(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator +	kits/field.hpp	/^    Sexpolar operator+(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar
+operator +	kits/field.hpp	/^    Tripolar operator+(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator +	kits/field.hpp	/^    Tripolar operator+(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator +=	kits/field.hpp	/^    Sexpolar &operator+=(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar &
+operator +=	kits/field.hpp	/^    Tripolar &operator+=(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator +=	kits/field.hpp	/^    Tripolar &operator+=(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator -	kits/field.hpp	/^    Sexpolar operator-(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar
+operator -	kits/field.hpp	/^    Tripolar operator-(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator -	kits/field.hpp	/^    Tripolar operator-(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator -=	kits/field.hpp	/^    Sexpolar &operator-=(const R &rhs) {$/;"	f	class:slj::Sexpolar	typeref:typename:Sexpolar &
+operator -=	kits/field.hpp	/^    Tripolar &operator-=(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator -=	kits/field.hpp	/^    Tripolar &operator-=(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator /	kits/field.hpp	/^    Tripolar operator\/(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator /	kits/field.hpp	/^    Tripolar operator\/(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar
+operator /=	kits/field.hpp	/^    Tripolar &operator\/=(const R &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+operator /=	kits/field.hpp	/^    Tripolar &operator\/=(const Tripolar &rhs) {$/;"	f	class:slj::Tripolar	typeref:typename:Tripolar &
+print	example/utility.cpp	/^void print(const R &a, const R &b)$/;"	f	typeref:typename:void
+printPolar	example/field.cpp	/^void printPolar(const slj::Tripolar<R> &t)$/;"	f	typeref:typename:void
+slj	kits/exception.hpp	/^namespace slj {$/;"	n
+slj	kits/field.hpp	/^namespace slj {$/;"	n
+slj	kits/utility.hpp	/^namespace slj {$/;"	n
+tail	kits/exception.hpp	/^    virtual void tail() {$/;"	f	class:slj::Exception	typeref:typename:void
+trepolar	example/field.cpp	/^void trepolar()$/;"	f	typeref:typename:void
+type	kits/exception.hpp	/^    virtual void type() {$/;"	f	class:slj::ErrorExpection	typeref:typename:void
+type	kits/exception.hpp	/^    virtual void type() {$/;"	f	class:slj::ErrorLogic	typeref:typename:void
+type	kits/exception.hpp	/^    virtual void type() {$/;"	f	class:slj::ErrorOutflow	typeref:typename:void
+type	kits/exception.hpp	/^    virtual void type() {$/;"	f	class:slj::Exception	typeref:typename:void
+view	kits/exception.hpp	/^    virtual void view() {$/;"	f	class:slj::Exception	typeref:typename:void
+x	kits/field.hpp	/^    R x, y, z;$/;"	m	class:slj::Tripolar	typeref:typename:R
+xx	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+xy	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+xz	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+y	kits/field.hpp	/^    R x, y, z;$/;"	m	class:slj::Tripolar	typeref:typename:R
+yy	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+yz	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+z	kits/field.hpp	/^    R x, y, z;$/;"	m	class:slj::Tripolar	typeref:typename:R
+zz	kits/field.hpp	/^    R xx, xy, xz, yy, yz, zz;$/;"	m	class:slj::Sexpolar	typeref:typename:R
+一、`Exception`类	doc/exception.md	/^## 一、`Exception`类$/;"	s	chapter:异常
+一、命名规则	readme.md	/^## 一、命名规则$/;"	s	chapter:libcpp
+三、`ErrorOutflow`	doc/exception.md	/^## 三、`ErrorOutflow`$/;"	s	chapter:异常
+三、代码格式	readme.md	/^## 三、代码格式$/;"	s	chapter:libcpp
+二、`ErrorLogic`	doc/exception.md	/^## 二、`ErrorLogic`$/;"	s	chapter:异常
+二、注释	readme.md	/^## 二、注释$/;"	s	chapter:libcpp
+五、宏	doc/exception.md	/^## 五、宏$/;"	s	chapter:异常
+五、组件说明	readme.md	/^### 五、组件说明$/;"	S	section:libcpp""三、代码格式
+六、使用示例	doc/exception.md	/^## 六、使用示例$/;"	s	chapter:异常
+四、`ErrorExpection`	doc/exception.md	/^## 四、`ErrorExpection`$/;"	s	chapter:异常
+四、目录说明	readme.md	/^### 四、目录说明$/;"	S	section:libcpp""三、代码格式
+异常	doc/exception.md	/^# 异常$/;"	c
