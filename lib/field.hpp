@@ -68,16 +68,21 @@ public:
         return {x*rhs.x, y*rhs.y, z*rhs.z};
     }
     Tripolar operator/(const Tripolar &rhs) {
-        #ifdef  DIVIDE_BY_ZERO_EXCEPTION
+        #if  defined(DIVIDE_BY_ZERO_EXCEPTION)
         {
-            (isEqual(rhs.x, 0) || isEqual(rhs.y, 0) || isEqual(rhs.z, 0))? (throw ERROROUTFLOW("divided by zero")) : (return {x/rhs.x, y/rhs.y, z/rhs.z});
+            if(isEqual<R>(rhs.x, 0) || isEqual<R>(rhs.y, 0) || isEqual<R>(rhs.z, 0)) {
+                throw ERROROUTFLOW("divided by zero");
+            }
+            else {
+                return {x/rhs.x, y/rhs.y, z/rhs.z};
+            }
         }
-        #elif   DIVIDE_BY_ZERO_TO_ZERO
+        #elif   defined(DIVIDE_BY_ZERO_TO_ZERO)
         {
             R xx, yy, zz;
-            isEqual(rhs.x, 0)?(xx = 0):(xx = x/rhs.x);
-            isEqual(rhs.y, 0)?(yy = 0):(yy = y/rhs.y);
-            isEqual(rhs.z, 0)?(zz = 0):(zz = z/rhs.z);
+            isEqual<R>(rhs.x, 0)?(xx = 0):(xx = x/rhs.x);
+            isEqual<R>(rhs.y, 0)?(yy = 0):(yy = y/rhs.y);
+            isEqual<R>(rhs.z, 0)?(zz = 0):(zz = z/rhs.z);
             return{xx, yy, zz};
         }
         #else
@@ -118,16 +123,21 @@ public:
         return {x*rhs, y*rhs, z*rhs};
     }
     Tripolar operator/(const R &rhs) {
-        #ifdef  DIVIDE_BY_ZERO_EXCEPTION
+        #if  defined(DIVIDE_BY_ZERO_EXCEPTION)
         {
-            (isEqual(rhs, 0))? (throw ERROROUTFLOW("divided by zero")) : (return {x/rhs, y/rhs, z/rhs});
+            if(isEqual<R>(rhs, 0)) {
+                throw ERROROUTFLOW("divided by zero");
+            }
+            else {
+                return {x/rhs, y/rhs, z/rhs};
+            }
         }
-        #elif   DIVIDE_BY_ZERO_TO_ZERO
+        #elif   defined(DIVIDE_BY_ZERO_TO_ZERO)
         {
             R xx, yy, zz;
-            isEqual(rhs.x, 0)?(xx = 0):(xx = x/rhs);
-            isEqual(rhs.y, 0)?(yy = 0):(yy = y/rhs);
-            isEqual(rhs.z, 0)?(zz = 0):(zz = z/rhs);
+            isEqual<R>(rhs.x, 0)?(xx = 0):(xx = x/rhs);
+            isEqual<R>(rhs.y, 0)?(yy = 0):(yy = y/rhs);
+            isEqual<R>(rhs.z, 0)?(zz = 0):(zz = z/rhs);
             return{xx, yy, zz};
         }
         #else

@@ -18,7 +18,7 @@ namespace slj {
 template <typename R>
 bool isEqual(const R &a, const R &b)
 {
-    constexpr R &c = 0.000001;
+    constexpr R c = 0.000001;
     return (std::abs(a - b) <= c) ? true : false;
 }
 }
