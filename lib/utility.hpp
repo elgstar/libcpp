@@ -3,7 +3,7 @@
 */
 #ifndef _SLJ_UTILITY_HPP_
 #define _SLJ_UTILITY_HPP_
-
+#include <cmath>
 
 
 namespace slj {
@@ -19,7 +19,7 @@ template <typename R>
 bool isEqual(const R &a, const R &b)
 {
     constexpr R &c = 0.000001;
-    return (a - b <= c) ? true : false;
+    return (std::abs(a - b) <= c) ? true : false;
 }
 }
 
