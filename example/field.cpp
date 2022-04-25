@@ -2,7 +2,7 @@
  * test the field
 */
 // #define DIVIDE_BY_ZERO_EXCEPTION
-// #define DIVIDE_BY_ZERO_TO_ZERO
+#define DIVIDE_BY_ZERO_TO_ZERO
 
 #include "../lib/field.hpp"
 
@@ -39,10 +39,10 @@ void trepolar()
     printPolar<float>(c);
     c=a;
     std::cout<<c.dot(b)<<std::endl<<std::endl;
-    b.y = - 0;
-    c=a;
-    c/=b;
-    printPolar<float>(c);
+    // b.y = - 0;
+    // c=a;
+    // c/=b;
+    // printPolar<float>(c);
     std::cout<<std::endl<<std::endl;
     float r = 10;
     printPolar<float>(a+r);

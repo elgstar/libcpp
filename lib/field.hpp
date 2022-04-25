@@ -135,10 +135,8 @@ public:
         #elif   defined(DIVIDE_BY_ZERO_TO_ZERO)
         {
             R xx, yy, zz;
-            isEqual<R>(rhs.x, 0)?(xx = 0):(xx = x/rhs);
-            isEqual<R>(rhs.y, 0)?(yy = 0):(yy = y/rhs);
-            isEqual<R>(rhs.z, 0)?(zz = 0):(zz = z/rhs);
-            return{xx, yy, zz};
+            isEqual<R>(rhs, 0)?(xx = yy = zz = 0):(xx = x/rhs, yy = y/rhs, zz = z/rhs);
+            return {xx, yy, zz};
         }
         #else
         {
