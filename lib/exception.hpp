@@ -27,9 +27,10 @@ public:
     virtual ~Exception() = default;
 protected:
     virtual void head() {
-        std::cerr << "Error! " << std::endl;
+        std::cerr << std::endl << "Error! " << std::endl;
         std::cerr << "CPP version: " << __cplusplus << std::endl;
-        std::cerr << "Filename: " << filename << std::endl;
+        std::cerr << "Compile date: " << __DATE__ << std::endl;
+        std::cerr << "File: " << filename << std::endl;
         std::cerr << "Function: " << function << std::endl;
         std::cerr << "Line: " << linenumber << std::endl;
     }
@@ -37,7 +38,7 @@ protected:
         std::cerr << "Type: basic exception" << std::endl;
     }
     virtual void tail() {
-        std::cerr << "Supplement: " << msg <<std::endl;
+        std::cerr << "Supplement: " << msg <<std::endl << std::endl << std::endl;
     }
 public:
     virtual void view() {
@@ -98,4 +99,19 @@ protected:
     }
 };
 }
+
+
+namespace slj {
+/*
+ * @brief: macro function to get the exception information
+ * @info: written by Liangjin Song on 20220425 at Nanchang University
+ * @param: msg -- exceptional supplementary information
+*/
+#define EXCEPTION(msg)              (slj::Exception{__FILE__ , __FUNCTION__ , __LINE__ , msg})
+#define ERRORLOGIC(msg)             (slj::ErrorLogic{__FILE__ , __FUNCTION__ , __LINE__ , msg})
+#define ERROROUTFLOW(msg)           (slj::ErrorOutflow{__FILE__ , __FUNCTION__ , __LINE__ , msg})
+#define ERROREXPECTION(msg)         (slj::ErrorExpection{__FILE__ , __FUNCTION__ , __LINE__ , msg})
+}
+
+
 #endif
