@@ -5,6 +5,27 @@
 #define _SLJ_UTILITY_HPP_
 #include <cmath>
 
+#include <cstddef>
+
+namespace slj {
+/*
+ * @brief: the number definition
+ * @info: written by Liangjin Song on 20220426 an Nanchang University
+ * @type: n_nat -- the natural number
+ * @type: n_real -- the real number
+*/
+typedef size_t n_nat;
+#if defined(SLJ_REAL_FLOAT)
+    typedef float n_real;
+#elif defined(SLJ_REAL_DOUBLE)
+    typedef double n_real;
+#elif defined(SLJ_REAL_LONG_DOUBLE)
+    typedef long double n_real;
+#else
+    typedef double n_real;
+#endif
+}
+
 
 namespace slj {
 /*
@@ -19,7 +40,7 @@ template <typename R>
 bool isEqual(const R &a, const R &b)
 {
     constexpr R c = 0.000001;
-    return (std::abs(a - b) <= c) ? true : false;
+    return std::abs(a - b) <= c;
 }
 }
 
