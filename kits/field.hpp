@@ -277,6 +277,12 @@ public:
     void reset(const ITripolar &sz) {
         this->reset(sz.i, sz.j, sz.k);
     }
+    friend void swap(Scalar &a, Scalar &b) {
+        std::swap(a.nx, b.nx);
+        std::swap(a.ny, b.ny);
+        std::swap(a.nz, b.nz);
+        std::swap(a.val, b.val);
+    }
 };
 }
 

@@ -33,4 +33,10 @@ int main()
     p3->m = 500;
     p3.reset();
     std::cout<<" ====== \n" ;
+    std::unique_ptr<Class> p4 = slj::make_unique<Class>();
+    p4->m  = 300;
+    std::unique_ptr<Class> p5 = slj::make_unique<Class>();
+    p5->m  = 200;
+    std::swap(p4, p5);
+    std::cout<<p4->m <<"   "<<p5->m<<std::endl;
 }
