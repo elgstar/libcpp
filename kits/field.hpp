@@ -5,7 +5,7 @@
 #define _SLJ_FIELD_HPP_
 #include "exception.hpp"
 #include "utility.hpp"
-#include <memory>
+#include <functional>
 
 namespace slj {
 /*
@@ -15,9 +15,9 @@ namespace slj {
 */
 class ITripolar {
 public:
-    n_nat i, j, k;
+    size_t i, j, k;
 public:
-    ITripolar(const n_nat &ii = 0, const n_nat &jj = 0, const n_nat &kk = 0): i(ii), j(jj), k(kk) {}
+    ITripolar(const size_t &ii = 0, const size_t &jj = 0, const size_t &kk = 0): i(ii), j(jj), k(kk) {}
     ~ITripolar() = default;
 };
 
@@ -202,6 +202,51 @@ public:
     Sexpolar &operator*=(const R &rhs) {
         (*this) = (*this) * rhs;
         return *this;
+    }
+};
+}
+
+
+namespace slj {
+/*
+ * @brief: describe the scalar field
+ * @info: written by Liangjin Song on 20220426 at Nanchang University
+ * @value: val -- pointer to the data, use 1D arrays to represent 3D data
+ * @value: nx, ny, nz -- the number of grids in three direction
+*/
+template <typename R>
+class Scalar {
+private:
+    std::unique_ptr<R[]> val;
+    size_t nx, ny, nz;
+private:
+    void foreach(const std::function<void(R &)> &f) {
+        for(size_t i =0; i<this->length(); ++i) {
+            f(val[i]);
+        }
+    }
+public:
+    Scalar(const size_t &i = 0, const size_t &j = 0, const size_t &k = 0): nx(i), ny(j), nz(k) {
+        (i*j*k == 0)? val.reset() : (val=slj::make_unique<R[]>(i*j*k));
+    }
+    ~Scalar() = default;
+    Scalar(const Scalar &r) {
+        auto f = [&](R & v) {
+        };
+    }
+public:
+    ITripolar size() const {
+        return {nx, ny, nz};
+    }
+    size_t length() const {
+        return nx*ny*nz;
+    }
+public:
+    void reset(const size_t &i = 0, const size_t &j = 0, const size_t &k = 0) {
+        nx = i;
+        ny = j;
+        nz = k;
+        (i*j*k == 0)? val.reset() : (val=slj::make_unique<R[]>(i*j*k));
     }
 };
 }
