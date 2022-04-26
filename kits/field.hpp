@@ -5,6 +5,7 @@
 #define _SLJ_FIELD_HPP_
 #include "exception.hpp"
 #include "utility.hpp"
+#include <cstddef>
 #include <functional>
 
 namespace slj {
@@ -221,18 +222,43 @@ private:
     size_t nx, ny, nz;
 private:
     void foreach(const std::function<void(R &)> &f) {
-        for(size_t i =0; i<this->length(); ++i) {
+        for(size_t i =0; i<length(); ++i) {
             f(val[i]);
         }
     }
+    void foreach(const std::function<void (const size_t &)> &f) {
+        for(size_t i = 0; i< length(); ++i) {
+            f(i);
+        }
+    }
 public:
-    Scalar(const size_t &i = 0, const size_t &j = 0, const size_t &k = 0): nx(i), ny(j), nz(k) {
-        (i*j*k == 0)? val.reset() : (val=slj::make_unique<R[]>(i*j*k));
+    Scalar(const size_t &i = 0, const size_t &j = 0, const size_t &k = 0) {
+        reset(i, j, k);
+    }
+    Scalar(const ITripolar &sz) {
+        reset(sz);
     }
     ~Scalar() = default;
     Scalar(const Scalar &r) {
-        auto f = [&](R & v) {
+        (*this) = r;
+    }
+    Scalar(Scalar &&r) {
+        (*this) = std::move(r);
+    }
+    Scalar &operator=(const Scalar &r) {
+        reset(r.size());
+        auto f = [&](const size_t &i) {
+            val[i] = r[i];
         };
+        foreach(f);
+        return *this;
+    }
+    Scalar &operator=(Scalar &&r) {
+        nx = r.nx;
+        ny = r.ny;
+        nz = r.nz;
+        val = std::move(r.val);
+        return *this;
     }
 public:
     ITripolar size() const {
@@ -247,6 +273,9 @@ public:
         ny = j;
         nz = k;
         (i*j*k == 0)? val.reset() : (val=slj::make_unique<R[]>(i*j*k));
+    }
+    void reset(const ITripolar &sz) {
+        this->reset(sz.i, sz.j, sz.k);
     }
 };
 }
